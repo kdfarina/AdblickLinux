@@ -1,0 +1,53 @@
+Linux:
+
+Programa python para generar archivos shapefiles desde un archivo KML usando las librerias osgeo/GDAL de código abierto.  Se corrió sobre una maquina local Linux. Y sobre local Windows 10.
+
+Entrada:
+KML_Samples.kml (harcode en el codigo .py)
+
+Salida:
+KML_Samples_lines.shp
+KML_Samples_lines.dbf
+KML_Samples_lines.shx
+ML_Samples_lines.prj 
+
+KML_Samples_points.shp
+KML_Samples_points.dbf 
+KML_Samples_points.shx 
+KML_Samples_points.prj 
+
+KML_Samples_polygons.shp
+KML_Samples_polygons.dbf  
+KML_Samples_polygons.shx  
+KML_Samples_polygons.prj  
+   
+Status:
+Genera los archivos correctamente 
+
+
+Version de Linux Ubuntu: 
+$ sudo uname -rm
+>5.13.0-48-generic x86_64
+
+La versión de Ubuntu, la edición y los apodos se obtienen con el comando:
+$ lsb_release -a
+>No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.4 LTS
+Release:	20.04
+Codename:	focal
+
+Version de python:
+$ python3 –version
+>Python 3.8.10
+
+Se instalaron las librerias osgeo/GDAL  sobre python 3.8. Esta librería es necesaria para el codigo handler.py:
+
+Version de GDAL:
+$ ogrinfo --version
+GDAL 3.3.2, released 2021/09/01
+
+PARA INSTALAR GDAL
+$ sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update
+$ sudo apt-get install gdal-bin
+
